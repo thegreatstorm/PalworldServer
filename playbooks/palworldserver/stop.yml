@@ -2,4 +2,4 @@
 - hosts: localhost
   tasks:
   - name: "Stopping palworld Server! {{hostname}}"
-    shell: ps aux | grep -ie "{{identity}}" | grep -v grep | awk '{print $2}' | xargs kill -9
+    shell: ps aux | grep -ie "PalServer.sh" | grep -v grep | awk '{print $2}' | xargs kill -9
