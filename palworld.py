@@ -10,7 +10,6 @@ import json
 from bin.utils.argument_controller import argument_controller
 from bin.utils.configuration_controller import config_controller, set_game_config, get_game_config
 from bin.server_manager import run_playbook
-from bin.utils.Palworld_rcon_connector import connect_Palworld_rcon
 from bin.server_manager import find_process
 
 # Grabs path where this script was ran.
