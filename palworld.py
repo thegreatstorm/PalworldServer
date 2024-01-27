@@ -79,17 +79,6 @@ if args.install:
         print("Palworld Server not installed.")
         exit(0)
 
-if args.update:
-    print("Updating Palworld Server")
-    print("--------------------------------------------------------")
-    if game_installed != 'unset':
-        playbook_name = "update.yml"
-        playbook = os.path.abspath(os.path.join(prefix_dir, "playbooks/{}/{}".format(current_game, playbook_name)))
-        run_playbook(playbook, game_config)
-    else:
-        print("Palworld Server not installed.")
-        exit(1)
-
 if args.stop:
     print("Stopping Palworld Server")
     print("--------------------------------------------------------")
