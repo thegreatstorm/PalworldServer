@@ -122,6 +122,27 @@ if args.restart:
         print("Palworld Server not installed.")
         exit(1)
 
+if args.clean:
+    print("Cleaning Server Directory")
+    print("--------------------------------------------------------")
+    # Removing Server Folder
+    server_dir = os.path.abspath(os.path.join(prefix_dir, "server/"))
+    conf = os.path.abspath(os.path.join(prefix_dir, "var/conf/"))
+    # Creating server folder.
+    try:
+        if os.path.isdir(server_dir):
+            shutil.rmtree(server_dir)
+            os.makedirs(server_dir + "/conf")
+            if os.path.isfile("{}/local.conf".format(conf)):
+                os.remove("{}/local.conf".format(conf))
+            print("Cleaned Settings")
+        else:
+            os.makedirs(server_dir + "/conf")
+            os.makedirs(server_dir + "/downloads")
+            print("Cleaned Settings")
+    except OSError as error:
+        print("Failed to Clean OSError: ".format(str(error)))
+
 if args.check:
     print("Checking Palworld Server Is Running")
     print("--------------------------------------------------------")
