@@ -2,6 +2,6 @@
 - hosts: localhost
   tasks:
   - name: "Starting Palworld Server! {{hostname}}"
-    shell: ps aux | grep -ie "PalServer.sh" | grep -v grep | awk '{print $2}' | xargs kill -9
+    shell: ps aux | grep -ie "palworld" | grep -v grep | awk '{print $2}' | xargs kill -9
   - name: "Starting up Palworld server. Log: {{app_dir}}/logs/palworld-services.log"
     shell: cd {{app_dir}}/palworld/ && nohup ./PalServer.sh -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS >> {{app_dir}}/logs/palworld-services.log 2>&1&
