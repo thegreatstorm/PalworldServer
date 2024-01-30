@@ -28,7 +28,7 @@ def rcon_connect(server_ip, rcon_port, rcon_password):
     rcon_connection = PalworldRcon(server_ip, rcon_port, rcon_password)
     print("Rcon Connected. Type in exit to exit rcon.")
     while True:
-        message = input("Command:")
+        message = input("Command: ")
         if message == 'exit':
             break
         print(rcon_connection.run_command(message))

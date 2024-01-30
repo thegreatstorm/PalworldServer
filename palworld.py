@@ -139,6 +139,7 @@ if args.rcon:
         rcon_port = input("Rcon Port: ")
         rcon_password = input("Rcon Password: ")
         rcon_connect('0.0.0.0', int(rcon_port), rcon_password)
+        exit(0)
     else:
         print("Palworld Server not installed.")
         exit(1)
