@@ -26,6 +26,7 @@ def find_process(server_identity):
 def rcon_connect(server_ip, rcon_port, rcon_password):
     ## Sets up the RCON connection
     rcon_connection = PalworldRcon(server_ip, rcon_port, rcon_password)
+    print("Rcon Connected. Type in exit to exit rcon.")
     while True:
         message = input("Command:")
         if message == 'exit':
