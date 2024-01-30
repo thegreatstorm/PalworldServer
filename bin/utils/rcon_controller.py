@@ -100,8 +100,6 @@ class SourceRcon:
                 s.connect((self.SERVER_IP, self.RCON_PORT))
             except socket.error as e:
                 print(f"Failed to connect to socket. Error: {e}")
-            else:
-                print("Connection successful.")
 
             # Authenticate to server rcon before sending command
             #print("Authenticating to server rcon before sending command.")
@@ -112,9 +110,7 @@ class SourceRcon:
 
             # Get and parse authentication response
             auth_response = self.receive_all(s)
-            if self.get_auth_response(auth_response):
-                print("Authentication successful.")
-            else:
+            if not self.get_auth_response(auth_response):
                 print("Authentication failed. Not running command.")
                 return ""
 
