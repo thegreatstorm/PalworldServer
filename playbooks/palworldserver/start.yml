@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
   tasks:
-  - name: "Starting up palworld server. Log: {{app_dir}}/logs/palworld-services.log"
-    shell: cd {{app_dir}}/palworld/ && nohup ./PalServer.sh -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS >> {{app_dir}}/logs/palworld-services.log 2>&1&
+  - name: "Starting up {{server_identity}} server. Log: {{app_dir}}/logs/palworld-services.log"
+    shell: cd {{app_dir}}/palworld/ && nohup ./PalServer.sh EpicApp=PalServer -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS port={{server_port}} players={{players}} >> {{app_dir}}/logs/palworld-services.log 2>&1&

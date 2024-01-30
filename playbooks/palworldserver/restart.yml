@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   tasks:
-  - name: "Starting Palworld Server! {{hostname}}"
-    shell: ps aux | grep -ie "palworld" | grep -v grep | awk '{print $2}' | xargs kill -9
-  - name: "Starting up Palworld server. Log: {{app_dir}}/logs/palworld-services.log"
-    shell: cd {{app_dir}}/palworld/ && nohup ./PalServer.sh -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS >> {{app_dir}}/logs/palworld-services.log 2>&1&
+  - name: "Starting {{server_identity}} Server!"
+    shell: ps aux | grep -ie "{{server_identity}}" | grep -v grep | awk '{print $2}' | xargs kill -9
+  - name: "Starting up {{server_identity}} server. Log: {{app_dir}}/logs/{{server_identity}}-services.log"
+    shell: cd {{app_dir}}/palworld/ && nohup ./PalServer.sh EpicApp=PalServer -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS port={{server_port}} players={{players}} >> {{app_dir}}/logs/palworld-services.log 2>&1&

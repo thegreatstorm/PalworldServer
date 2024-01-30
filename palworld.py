@@ -27,7 +27,7 @@ app_name = config_settings.get('general', 'app_name')
 version = config_settings.get('general', 'version')
 description = config_settings.get('general', 'description')
 game_installed = config_settings.get('game_settings', 'installed')
-current_game = "palworldserver"
+current_game = "palworld"
 app_directory = os.path.abspath(os.path.join(prefix_dir, "server/"))
 # ================ Configuration Piece ===================
 

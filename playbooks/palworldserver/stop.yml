@@ -1,5 +1,5 @@
 ---
 - hosts: localhost
   tasks:
-  - name: "Stopping palworld Server! {{hostname}}"
-    shell: ps aux | grep -ie "palworld" | grep -v grep | awk '{print $2}' | xargs kill -9
+  - name: "Stopping {{server_identity}} Server! "
+    shell: ps aux | grep -ie "{{server_identity}}" | grep -v grep | awk '{print $2}' | xargs kill -9
