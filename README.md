@@ -23,7 +23,7 @@ you can even run rcon using this python application!
     * `dpkg --add-architecture i386; apt update; apt install lib32gcc-s1 steamcmd ansible wget tar unzip git python3.11 vim netcat pip `
     
 ## Recommended Setup: 
-### Set the non-root user as the default user
+### Set a default user
 ```USER gameadmin```
 
 ### Set the working directory
