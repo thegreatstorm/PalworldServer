@@ -3,6 +3,7 @@ import json
 from subprocess import check_output
 import re
 from bin.utils.configuration_controller import config_controller
+from bin.utils.rcon_controller import PalworldRcon
 
 
 def run_playbook(playbook, game_server_config):
@@ -20,3 +21,16 @@ def find_process(server_identity):
       return True
 
   return False
+
+
+def rcon_connect(server_ip, rcon_port, rcon_password):
+    ## Sets up the RCON connection
+    rcon_connection = PalworldRcon(server_ip, rcon_port, rcon_password)
+    while True:
+        message = input("Command:")
+        if message == 'exit':
+            break
+        print(rcon_connection.run_command(message))
+    return rcon_connection
+
+

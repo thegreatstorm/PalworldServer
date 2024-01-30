@@ -10,5 +10,6 @@ def argument_controller():
     parser.add_argument('--check', help='Check Running', required=False, action='store_true')
     parser.add_argument('--clean', help='Destroys server folder', required=False, action='store_true')
     parser.add_argument('--restart', help='Restart Palworld Server', required=False, action='store_true')
+    parser.add_argument('--rcon', help='Rcon Connect To Palworld Server', required=False, action='store_true')
     args = parser.parse_args()
     return args
