@@ -138,7 +138,7 @@ if args.rcon:
         game_config = get_game_config(prefix_dir, game_config, current_game)
         rcon_port = input("Rcon Port: ")
         rcon_password = input("Rcon Password: ")
-        rcon_connect('0.0.0.0', rcon_port, rcon_password)
+        rcon_connect('0.0.0.0', int(rcon_port), rcon_password)
     else:
         print("Palworld Server not installed.")
         exit(1)
