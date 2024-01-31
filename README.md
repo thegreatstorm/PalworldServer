@@ -4,6 +4,7 @@
 
 ## Credit RCON functionality to following
 https://github.com/gavinnn101/palworld_dedi_helper
+
 https://github.com/eternity336/PalworldServerMonitor
 
 ## Summary
