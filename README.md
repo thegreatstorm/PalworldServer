@@ -2,6 +2,10 @@
 
 <img src="https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg" alt="My cool logo"/>
 
+## Credit RCON functionality to following
+https://github.com/gavinnn101/palworld_dedi_helper
+https://github.com/eternity336/PalworldServerMonitor
+
 ## Summary
 This python application was design to help installing and running palworld dedicated servers
 you can even run rcon using this python application! 
