@@ -78,7 +78,7 @@ if args.install:
         print("Palworld Server not installed.")
         exit(0)
 
-if args.install:
+if args.update:
     print("Updating Palworld Server: {}".format(current_game))
     print("--------------------------------------------------------")
     if game_installed == 'unset':
