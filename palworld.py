@@ -78,6 +78,23 @@ if args.install:
         print("Palworld Server not installed.")
         exit(0)
 
+if args.install:
+    print("Updating Palworld Server: {}".format(current_game))
+    print("--------------------------------------------------------")
+    if game_installed == 'unset':
+        playbook_name = "update.yml"
+        playbook = os.path.abspath(os.path.join(prefix_dir, "playbooks/{}/{}".format(current_game, playbook_name)))
+        try:
+            # Copies over the config
+            set_game_config(script_dir, config_settings, current_game)
+            run_playbook(playbook, game_config)
+        except Exception as e:
+            print("Failed To Install: {}".format(str(e)))
+            exit(1)
+    else:
+        print("Palworld Server not installed.")
+        exit(0)
+
 if args.stop:
     print("Stopping Palworld Server")
     print("--------------------------------------------------------")
