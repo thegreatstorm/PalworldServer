@@ -81,7 +81,7 @@ if args.install:
 if args.update:
     print("Updating Palworld Server: {}".format(current_game))
     print("--------------------------------------------------------")
-    if game_installed == 'unset':
+    if game_installed != 'unset':
         playbook_name = "update.yml"
         playbook = os.path.abspath(os.path.join(prefix_dir, "playbooks/{}/{}".format(current_game, playbook_name)))
         try:
