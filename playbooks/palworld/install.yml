@@ -4,4 +4,4 @@
   - name: "Making directory"
     shell: mkdir -p {{app_dir}}/logs
   - name: "Installing Palworld Server. If this fails make sure steamcmd is installed"
-    shell: "steamcmd +login anonymous +force_install_dir {{app_dir}}/palworld +app_update 2394010 -validate +quit"
+    shell: "/usr/games/steamcmd +login anonymous +force_install_dir {{app_dir}}/palworld +app_update 2394010 -validate +quit"
