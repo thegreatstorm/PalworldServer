@@ -86,7 +86,7 @@ if args.update:
         playbook = os.path.abspath(os.path.join(prefix_dir, "playbooks/{}/{}".format(current_game, playbook_name)))
         try:
             # Copies over the config
-            set_game_config(script_dir, config_settings, current_game)
+            #set_game_config(script_dir, config_settings, current_game)
             run_playbook(playbook, game_config)
         except Exception as e:
             print("Failed To Install: {}".format(str(e)))
